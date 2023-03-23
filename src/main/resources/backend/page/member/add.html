@@ -131,7 +131,9 @@
           }
         },
         created() {
+          //获取id
           this.id = requestUrlParam('id')
+          //如果id为空则是新增用户，反正则修改
           this.actionType = this.id ? 'edit' : 'add'
           if (this.id) {
             this.init()
